@@ -5,7 +5,7 @@ Fail2Ban Filter for Ninjafirewall WP
 
 How to use:
 
-* Install Ninjafirewall WP to you WordPress web site.
+* Install Ninjafirewall WP to your WordPress web site.
 * Enable brute force attack protection in Ninjafirewall (recommended setting: "Always ON").
 * Checkmark "Write the incident to the server Authentication log."
 * Copy /filter.d/ninjafirewall.conf from this repository to /etc/fail2ban/filter.d/
