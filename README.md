@@ -12,12 +12,19 @@ How to use:
 * Add a [ninjafirewall] section to the Jails section of /etc/fail2ban/jail.local file...
 
 	[ninjafirewall]
+	
 	port = http,https
+	
 	filter = ninjafirewall
+	
 	logpath  = %(syslog_authpriv)s
+	
 	backend  = %(syslog_backend)s
+	
 	maxretry = 2
+	
 	enabled = true
+	
 	
 * Restart your Fail2Ban service.
 
