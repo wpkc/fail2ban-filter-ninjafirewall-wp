@@ -3,11 +3,11 @@ Fail2Ban Filter for Ninjafirewall WP
 
 How to use:
 
-* Install Ninjafirewall WP to your WordPress web site.
+* Install [Ninjafirewall WP](https://wordpress.org/plugins/ninjafirewall/) to your WordPress web site.
 * Enable brute force attack protection in Ninjafirewall (recommended setting: "Always ON").
-* Checkmark "Write the incident to the server Authentication log."
-* Copy /filter.d/ninjafirewall.conf from this repository to /etc/fail2ban/filter.d/
-* Add a [ninjafirewall] section to the Jails section of /etc/fail2ban/jail.local file...
+* Checkmark `Write the incident to the server Authentication log.`
+* Copy [/filter.d/ninjafirewall.conf](https://github.com/wpkc/fail2ban-filter-ninjafirewall-wp/blob/master/filter.d/ninjafirewall.conf) from this repository to `/etc/fail2ban/filter.d/`
+* Add a `[ninjafirewall]` section to the Jails section of your `/etc/fail2ban/jail.local` file...
 ```python
 	[ninjafirewall]
 	port = http,https
@@ -17,12 +17,12 @@ How to use:
 	maxretry = 2
 	enabled = true
 ```
-* Restart your Fail2Ban service.
+* Restart Fail2Ban: `service fail2ban restart`
 
 
 Additional Notes:
 
-* Keep the maxretry override value low. Ninjafirewall is detecting automated brute-force attacks, not accidental password errors by humans.
-* If using CloudFlare on the web site, please see the fail2ban-action-cloudflare-restv4 repository for an updated CloudFlare action configuration file.
+* Keep the maxretry override value low; 2 is good. Ninjafirewall is detecting automated brute-force attacks by bots, not accidental password errors by humans.
+* If using CloudFlare on the web site, please see the [fail2ban-action-cloudflare-restv4](https://github.com/wpkc/fail2ban-filter-ninjafirewall-wp) repository for an updated CloudFlare action configuration file.
 
 More info: <https://www.kazimer.com/fail2ban-filter-recipe-ninjafirewall/>
