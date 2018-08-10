@@ -1,6 +1,8 @@
 Fail2Ban Filter for Ninjafirewall WP
 ====================================
 
+Note: _This will only work if you have full access to your web server's `/etc/fail2ban/` files._
+
 How to use:
 
 * Install [Ninjafirewall WP](https://wordpress.org/plugins/ninjafirewall/) to your WordPress web site.
