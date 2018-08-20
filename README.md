@@ -6,7 +6,7 @@ Note: _This will only work if you have full access to your web server's `/etc/fa
 How to use:
 
 * Install [Ninjafirewall WP](https://wordpress.org/plugins/ninjafirewall/) to your WordPress web site.
-* Enable brute force attack protection in Ninjafirewall (recommended setting: "Always ON").
+* Enable brute force attack protection in Ninjafirewall ("Yes, if under attack" is the only setting that will generate brute-force attack log entries).
 * Checkmark `Write the incident to the server Authentication log.`
 * Copy [/filter.d/ninjafirewall.conf](https://github.com/wpkc/fail2ban-filter-ninjafirewall-wp/blob/master/filter.d/ninjafirewall.conf) from this repository to `/etc/fail2ban/filter.d/`
 * Add a `[ninjafirewall]` section to the Jails section of your `/etc/fail2ban/jail.local` file...
