@@ -25,6 +25,6 @@ How to use:
 Additional Notes:
 
 * Keep the maxretry override value low; 2 is good. Ninjafirewall is detecting automated brute-force attacks by bots, not accidental password errors by humans.
-* If using CloudFlare on the web site, please see the [fail2ban-action-cloudflare-restv4](https://github.com/wpkc/fail2ban-filter-ninjafirewall-wp) repository for an updated CloudFlare action configuration file.
+* If using CloudFlare on the web site, please see the [fail2ban-action-cloudflare-restv4](https://github.com/wpkc/fail2ban-action-cloudflare-restv4) repository for an updated CloudFlare action configuration file.
 
 More info: <https://www.kazimer.com/fail2ban-filter-recipe-ninjafirewall/>
